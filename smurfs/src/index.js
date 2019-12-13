@@ -5,10 +5,11 @@ import App from "./components/App";
 import thunk from "redux-thunk";
 import { combineReducers, createStore, compose, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
-import { smurfsReducer } from "./state/reducers";
+import { smurfsReducer, formReducer } from "./state/reducers";
 
 const monsterReducer = combineReducers({
-  smurfs: smurfsReducer
+  smurfs: smurfsReducer,
+  form: formReducer
 });
 
 const store = createStore(

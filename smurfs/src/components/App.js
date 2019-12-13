@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./App.css";
 import { connect } from "react-redux";
 import { getSmurfs } from "../state/actionCreators";
+import Form from './Form';
 
 function App({ smurfs, getSmurfs }) {
   console.log(smurfs);
@@ -17,9 +18,10 @@ function App({ smurfs, getSmurfs }) {
       <div>Have fun!</div>
       {
         smurfs.map((smurf) => {
-          return <h1>{smurf.name}</h1>
+          return <h2>{smurf.name}</h2>
         })
       }
+      <Form />
     </div>
   );
 }
