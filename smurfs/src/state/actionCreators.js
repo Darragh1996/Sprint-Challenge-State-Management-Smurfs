@@ -8,7 +8,7 @@ export const getSmurfs = () => dispatch => {
       console.log(res);
       dispatch({
           type: types.GET_SMURFS,
-          payload: res
+          payload: res.data
       })
     })
     .catch(err => {
