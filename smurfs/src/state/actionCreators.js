@@ -45,6 +45,7 @@ export const submit = event => dispatch => {
   event.persist();
   event.preventDefault();
   let obj = {
+    id: Date.now(),
     name: event.target.name.value,
     age: event.target.age.value,
     height: event.target.height.value
